@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lifesim1.css">
+    <title>Life Simulator v1.0.12 - Vanilla JS</title>
+</head>
+<body>
+<header>
+    <div class="start">
+        <h1>Welcome to Life Simulator</h1>
+        <p class="intro">Your story begins here, you have been born and lived your first 16 years of life, just leaving high school, your now on your own. First things first, lets get to know you a little better...shall we?</p>
+    <p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="userName"><br>
+            <!-- <label for="gender">What sex are you?</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female <br> -->
+            <input type="submit" value="Begin Game" class="begin">
+    </p>
+    <p>
+        <strong>Note:</strong> This game is still in development, things will break and are broken and style is NOT finished.
+    </p>
+
+    </div>
+    <div class="container">
+        <h1 class="header mainHeader">Life Simulator</h1>
+        <ul class="userInfo">
+            <li class="name">Name: </li>
+            <li class="age">Age: </li>
+            <li class="money">Money:</li>
+            <li class="hunger">Hunger:</li>
+            <li class="health">Health:</li>
+            <li class="fitness">Fitness:</li>
+            <li class="date">Day:  </li>
+        </ul>
+    </header>
+    <div class="lifelog">
+        <h2>Life Log:</h2>
+        <p class="lifeLogText"></p>
+    </div>
+    <div class="options">
+        <button class="eat">Go Shopping</button>
+        <button class="getjob">Get Job</button>
+        <button class="work">Goto Work</button>
+        <button class="workout">Work Out</button>
+        <button class="gotoSleep">Goto Sleep</button>
+    </div>
+    <div class="goshopping">
+        <button class="goBack">Go Back</button>
+        <button class="basicFood">Cheese Burger - $5 + 10 Hunger + 15 Fitness</button>
+    </div>
+    </div>
+    <footer>
+        <button class="showLog">Show ChangeLog</button>
+        <button class="hideLog">Close ChangeLog</button>
+<div class="changelog">
+    <h2>ChangeLog</h2>
+    <p>
+        v1.0.15 -<br> Added Life Log to page
+                 <br> Removed altert functions and replaced them with life log Entry instead
+                 <br> New Life log entries currently replace old ones. However this might change in future.
+      
+    </p>
+    <p>
+        v1.0.14 -<br> Hide ChangeLog Until user wants to see it by click "Show ChangeLog" which changes to Close change log and vice versa
+      
+    </p>
+    <p>
+        v1.0.13 -<br> Added Basic Styles to make it look better. Will be improved upon further.
+      
+    </p>
+    <p>
+        v1.0.12 -<br> Hide Goto work button until Get job is clicked, instead of having it displayed and disabled.
+      
+    </p>
+    <p>
+        v1.0.11 -<br> Changed "Eat Food" to go Shopping
+                 <br> Clicking Go Shopping brings up another menu to allow you to buy food/drink based on fintness gain and cost.    
+                 <br>Added go Back button to return to main menu          
+    </p>
+    <p>
+        v1.0.10 -<br> Created external CSS and JS files for seperation of concerns.                
+    </p>
+    <p>
+        v1.0.9 -<br> Added basic introduction to game
+                <br> Hid main game and changelog when game starts
+                <br>Show main game and hide intro when Begin game is clicked
+                <br>Removed prompt for name as no longer required.
+                
+    </p>
+    <p>
+        v1.0.8 -<br> User fitness cannot go above max fitness fixed.
+                <br> Changed sleep fitness gains from random to max fitness until further notice.
+                <br>Changed Date to Day, after 365 days, your age changes.
+                
+    </p>
+    <p>
+        v1.0.7 -<br> Updated functions to ES6 arrow functions.
+                <br> Half fixed user fitness going above max fitness.
+                
+    </p>
+    <p>
+        v1.0.6 -<br> Added Workout button to allow random fitness gain from 0-5 points.
+                <br> Added Workout button to allow random temperary fitness loss during workout.
+                <br> Added random fitness gain to sleep, to simulate real sleep, random good or bad sleep.
+                <br> Added static $5 charge for food before shop is added.
+                <br> Added fitness gain of 15 from food.
+                <br>Added Fitness check function to avoid passing out, if level drops below 0, health is cut in half.
+                
+    </p>
+    <p>
+        v1.0.5 -<br> Various improvements and bug fixes.
+                
+    </p>
+    <p>
+        v1.0.4 -<br> Removed date function and replaced with virtual date. (All months have 31 days for now) (Not Enabled)
+                
+    </p>
+    <p>
+        v1.0.3 -<br> Fixed Date showing time issue.
+                <br> Date increases when sleeping
+    </p>
+    <p>
+        v1.0.2 -<br> Enabled all buttons to work in basic terms
+                <br> Get job button gets disabled if user clicks and gets job, enabling GoToWork button
+                <br> If user had job, then goes to sleep, job is remembered and go to work button is still enabled. 
+                <br>Date has been added
+    </p>
+    <p>
+        v1.0.1 -<br> Added Javascript Setup
+                <br> Disabled Goto Work button (until job aquired)
+    </p>
+    <p>
+        v1.0.0 - <br>Initial HTML Setup   
+    </p>
+</div>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="lifesim1.js"></script>
+</body>
+</html>
